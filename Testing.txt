@@ -1,0 +1,64 @@
+Testing
+-----------
+1) unit Testing
+2) Integration Testing
+
+1. Unit Testing
+---------------------
+The process of testing whether a particular unit is working properly or not
+
+2. Integration Testing
+----------------------------
+The process of testing total application. (QA team is responsible)
+
+Terminologies used
+-------------------------
+a) Test Scenario
+b) Test Case
+c) Test Suite
+
+Instagram Application Testing will be divided into multiple scenarios, out of which checking login functionality is one scenario
+Test Scenario : Login Functionality
+
+Test Case 1 : Valid username and valid password
+Test Case 2 : Valid username and invalid password
+Test Case 3 : Invalid username and valid password
+Test Case 4 : Invalid username and invalid password
+Test Case 5 : Empty username and empty password and so on....
+
+In Test Suite all test cases will be executed. Grouping all test cases into a single Suite. 
+
+
+How to perform unittest in Python
+---------------------------------------------
+module used: 	unittest	builtin module
+class Name:	TestCase
+instance methods:	3 Methods
+name should be same  a) setUp() - to perform test if we need any setup like database connectivity or opening a file or browser, we need this setUp() method
+name can be anything  b) test() - test logic will be implemented here 
+name should be same  c) tearDown() - Once testing is completed cleanup activities will be performed like closing the database/files/browser
+
+
+import unittest
+class TestCaseDemo(unittest.TestCase):
+    def setUp(self):
+        print("Setup Method")
+    def test(self):
+        print("Test Method")
+    def tearDown(self):
+        print("TearDown Method")
+unittest.main()
+
+
+
+import unittest
+class TestCaseDemo(unittest.TestCase):
+    def setUp(self):
+        print("Setup Method")
+    def test1(self):
+        print("Test Method")
+    def test2(self):
+        print("Test Method")
+    def tearDown(self):
+        print("TearDown Method")
+unittest.main()
